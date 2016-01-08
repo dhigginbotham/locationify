@@ -2,10 +2,10 @@ var locationify = function(str) {
   if (str) return locationify.parseHref(str);
   return locationify;
 };
-  
+
 // http schema/protocol
 locationify.getProtocol = function (str) {
-  var re = /https?:\/\//;
+  var re = /^\w?:/;
   if (str) return str.match(re);
 };
 
@@ -64,7 +64,7 @@ locationify.parseHref = function (str) {
 
   // reset/set current obj
   url.base = str;
-    
+
   // match/strip protocol
   protocol = locationify.getProtocol(str);
   if (protocol) {

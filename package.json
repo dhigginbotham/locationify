@@ -1,0 +1,29 @@
+{
+  "name": "locationify",
+  "version": "0.9.2",
+  "description": "makes location objects so easy!",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node --harmony test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhigginbotham/locationify.git"
+  },
+  "keywords": [
+    "location",
+    "window.location"
+  ],
+  "author": "David Higgamuffin & Dan Levy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dhigginbotham/locationify/issues"
+  },
+  "homepage": "https://github.com/dhigginbotham/locationify#readme",
+  "devDependencies": {
+    "tap": "^5.0.0"
+  }
+}
