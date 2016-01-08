@@ -47,7 +47,7 @@ locationify.serializeParams = function (obj) {
 
 locationify.parseHref = function (str) {
 
-  var pieces, paramIndex, protocol, hashIndex, url;
+  var pieces, protoHost, paramIndex, protocol, hashIndex, url;
 
   // base url obj values
   url = {
@@ -90,11 +90,18 @@ locationify.parseHref = function (str) {
   str = locationify.stripTrailing(str);
 
   // break pieces into array
-  pieces = str.split('/');
+  protoHost = str.split('//');
+  if (protoHost[1]) {
+    pieces = protoHost[1].split('/');
+    url.protocol = protoHost[0];
+  } else {
+    pieces = str.split('/');
+  }
+
   if (pieces.length) {
     url.host = pieces[0];
     if (pieces.length > 1) {
-      url.path = url.pathname = pieces.splice(1, pieces.length - 1);
+      url.path = url.pathname = pieces.splice(1);
     }
   }
 
