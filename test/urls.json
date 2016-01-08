@@ -1,0 +1,17 @@
+{
+  "file:///home/dan/passwords": {
+    "protocol": "file:",
+    "path": ["home", "dan", "passwords"]
+  },
+  "/justsml/locationify#top": {
+    "host": "",
+    "path": ["justsml", "locationify"],
+    "hash": "top"
+  },
+  "https://github.com/justsml#top": {
+    "protocol": "https:",
+    "host": "github.com",
+    "path": ["justsml"],
+    "hash": "top"
+  }
+}
